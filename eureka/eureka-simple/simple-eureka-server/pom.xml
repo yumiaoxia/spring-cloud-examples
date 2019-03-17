@@ -5,8 +5,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.itsherman</groupId>
-    <artifactId>eureka-server</artifactId>
+    <artifactId>simple-eureka-server</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <name>simple-eureka-server</name>
     <packaging>jar</packaging>
 
     <parent>

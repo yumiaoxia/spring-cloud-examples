@@ -1,0 +1,2 @@
+简单的eureka实现，主要做好依赖管理和yaml配置。
+项目启动顺序：server>provider>consumer
