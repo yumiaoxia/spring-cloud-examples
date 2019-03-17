@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: cluster-eureka-server-1
+
+server:
+  port: 8761
+
+eureka:
+  instance:
+    hostname: peer1
+  client:
+    service-url:
+      defaultZone: http://peer2:8762/eureka/ #设置 Eureka Server 交互的地址，查询服务和依赖服务都需要依赖这个地址，
+                                                 # 多个地址使用“,”隔开
