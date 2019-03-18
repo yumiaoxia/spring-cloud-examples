@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: eureka-consumer-movie
+    name: eureka-consumer-movie #
 
 
 eureka:
