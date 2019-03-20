@@ -1,0 +1,36 @@
+spring:
+  application:
+    name: ribbon-provider-user-simple
+  jpa:
+    generate-ddl: false
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+  datasource:
+    platform: h2
+    schema: classpath:schema.sql
+    data: classpath:data.sql
+  profiles:
+    active: provider2
+logging:
+  level:
+    root: INFO
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+    org.hibernate.type.descriptor.sql.BasicExtractor: TRACE
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
+---
+spring:
+  profiles: provider1
+server:
+  port: 8050
+---
+spring:
+  profiles: provider2
+server:
+  port: 8060
