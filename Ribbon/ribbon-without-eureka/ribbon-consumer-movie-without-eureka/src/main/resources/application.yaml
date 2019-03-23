@@ -1,0 +1,10 @@
+server:
+  port: 8020
+
+spring:
+  application:
+    name: eureka-consumer-movie
+
+ribbon-provider-user:
+  ribbon:
+    listOfServers: localhost:8050,localhost:8060
