@@ -29,12 +29,12 @@ public class MovieController {
 
     @GetMapping("/user/{id}")
     public User findById(@PathVariable Long id){
-        return this.restTemplate.getForObject("http://ribbon-provider-user-simple/user/"+id,User.class);
+        return this.restTemplate.getForObject("http://ribbon-provider-user/user/" + id, User.class);
     }
 
     @GetMapping("/log-user-instance")
     public void logUserInstance(){
-        ServiceInstance serviceInstance = this.loadBalancerClient.choose("ribbon-provider-user-simple");
+        ServiceInstance serviceInstance = this.loadBalancerClient.choose("ribbon-provider-user");
 
         MovieController.LOGGER.info("{}:{}:{}",serviceInstance.getServiceId(),serviceInstance.getHost(),serviceInstance.getPort());
     }

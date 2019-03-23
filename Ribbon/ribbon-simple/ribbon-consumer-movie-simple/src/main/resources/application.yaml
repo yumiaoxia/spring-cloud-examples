@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: eureka-consumer-movie
+    name: ribbon-consumer-movie
 
 
 eureka:

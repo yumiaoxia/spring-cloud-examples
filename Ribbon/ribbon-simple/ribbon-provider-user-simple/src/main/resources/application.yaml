@@ -1,6 +1,6 @@
 spring:
   application:
-    name: ribbon-provider-user-simple
+    name: ribbon-provider-user
   jpa:
     generate-ddl: false
     show-sql: true
