@@ -13,5 +13,9 @@ eureka:
     prefer-ip-address: true
 
 turbine:
-  app-config: hystrix-consumer-movie,hystrix-consumer-movie
-  cluster-name-expression: "'default'"
+  app-config: hystrix-consumer-movie
+  cluster-name-expression: "default"
+  combine-host-port: true
+
+management:
+  port: 8989

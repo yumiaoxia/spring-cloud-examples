@@ -30,7 +30,7 @@ public class MovieController {
     }
 
 
-    @HystrixCommand(fallbackMethod = "findByIdFallback",
+    @HystrixCommand(fallbackMethod = "findByIdFallback", ignoreExceptions = {IllegalArgumentException.class},
         commandProperties = {
             @HystrixProperty(name="execution.isolation.thread.timeoutInMilliseconds",value = "5000"),
             @HystrixProperty(name="metrics.rollingStats.timeInMilliseconds",value = "10000")
