@@ -13,8 +13,8 @@ eureka:
     prefer-ip-address: true
 
 turbine:
-  #  aggregator:
-  #    cluster-config: HYSTRIX-CONSUMER-MOVIE
+#  aggregator:
+#    cluster-config: HYSTRIX-CONSUMER-MOVIE
   app-config: hystrix-consumer-movie
   clusterNameExpression: "'default'"
 

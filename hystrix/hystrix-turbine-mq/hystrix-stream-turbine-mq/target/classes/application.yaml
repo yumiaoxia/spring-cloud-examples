@@ -1,20 +1,22 @@
 server:
   port: 8035
+
 spring:
+  rabbitmq:
+    host: 192.168.0.29
+    port: 5672
+    username: guest
+    password: guest
   application:
     name: hystrx-turbine
 eureka:
   client:
     register-with-eureka: false
-    fetch-registry: false
     service-url:
       defaultZone: http://localhost/8761/eureka/
+    fetch-registry: false
   instance:
     prefer-ip-address: true
 
-turbine:
-  #  aggregator:
-  #    cluster-config: HYSTRIX-CONSUMER-MOVIE
-  app-config: hystrix-consumer-movie
-  clusterNameExpression: "'default'"
-
+management:
+  port: 8090
